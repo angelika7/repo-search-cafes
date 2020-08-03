@@ -1,0 +1,178 @@
+.btn {
+    @include btn-style;
+    @include flex-center-row;
+    background-color: $color-green-dark-3;
+    border-radius: 100rem;
+    width: 12rem;
+    height: 4rem;
+    color: $color-green-light-4;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    transition: all .2s;
+    font-weight: 700;
+    text-align: center;
+    justify-self: flex-end;
+
+    @media only screen and (min-width: $bp-largest) {
+        font-size: 1.8rem;
+        width: 15rem;
+        height: 6rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        font-size: 1.2rem;
+        width: 10rem;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+        margin-bottom: 2rem;
+        align-self: flex-end;
+    }
+
+    @media only screen and (max-width: $bp-mobile) {
+        font-size: 1rem;
+        width: 8rem;
+    }
+
+    &:hover {
+        color: $color-green-dark-3;
+        background-color: $color-green-light-4;
+        outline: none;
+    }
+
+    i {
+        margin-left: .5rem;
+    }
+
+    &--prev,
+    &--next {
+        width: 8rem;
+        @include flex-center-column;
+
+        svg {
+            width: 2rem;
+            height: 2rem;
+        }
+
+        span {
+            font-size: .8rem;
+        }
+    }
+}
+
+.btn-inline {
+    margin-top: 2rem;
+}
+
+.btn-more {
+    @include flex-center-row;
+    background-color: transparent;
+    border: none;
+
+    i {
+        font-size: 1.7rem;
+    }
+
+    @media only screen and (max-width: $bp-large) {
+        justify-content: flex-end;
+        
+        &:not(:last-child) {
+            margin-bottom: .7rem;
+        } 
+
+        i {
+            font-size: 1.5rem;
+        }
+    }
+
+    @media only screen and (max-width: $bp-medium-extra) {
+        
+        &:not(:last-child) {
+            margin-bottom: 0;
+        } 
+
+        margin-right: 0;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        
+        &:not(:last-child) {
+            margin-right: 2rem;
+        } 
+    }
+
+    &--list {
+        justify-content: flex-end;
+    }
+
+    span {
+        cursor: pointer;
+    }
+}
+
+.button {
+    width: 3.1rem;
+    height: 3.1rem;
+    border: none;
+    background-color: transparent;
+    outline: none;
+}
+
+.add, .remove {
+    font-size: 2.5rem;
+    color: $color-green-dark-3;
+    cursor: pointer;
+
+    &:hover {
+        color: $color-green-dark-4;
+        outline: none;
+    }
+}
+
+.inactive {
+    color: gray !important;
+    cursor: default;
+
+    &:hover {
+        color: gray;
+        outline: none;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+.close {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    width: 6rem;
+    height: 6rem;
+    @include btn-style;
+    background-color: transparent;
+
+    @media only screen and (max-width: $bp-small-extra) {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    i {
+        color: $color-green-dark-4;
+        font-size: 6rem;
+        transform: scale(1);
+        transition: all .3s;
+
+        @media only screen and (max-width: $bp-small-extra) {
+            font-size: 3rem
+        }
+
+        &:hover {
+            transform: scale(1.1);
+            color: $color-green-dark-1;
+            outline: none;
+        }
+    }
+}
+
+

@@ -1,0 +1,25 @@
+@import "abstracts/animations";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
+
+@import "components/button";
+@import "components/details";
+@import "components/icons";
+@import "components/likes";
+@import "components/popup";
+@import "components/search";
+@import "components/table";
+
+@import "layout/footer";
+@import "layout/header";
+
+@import "./fontawesome/fontawesome.scss";
+@import "./fontawesome/brands.scss";
+@import "./fontawesome/solid.scss";
+
+@import "pages/home"; 
+

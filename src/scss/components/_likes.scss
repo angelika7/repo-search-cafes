@@ -1,0 +1,79 @@
+.likes {
+    position: relative;
+
+    &__field {
+        @include flex-center-column;
+        cursor: pointer;
+
+        @media only screen and (max-width: $bp-medium) {
+            width: 6rem;
+        }
+    }
+
+    &__panel {
+        position: absolute;
+        top: 16%;
+        right: 0;
+        width: 40rem;
+        transition: all .2s;
+        z-index: 10;
+
+        @media only screen and (max-width: $bp-smallest) {
+            width: 90%;
+        }
+    }
+    
+    &__list {
+        list-style: none;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__link:link,
+        :visited {
+        height: 10rem;
+        width: 95%;
+        box-shadow: 0 1rem 3rem rgba(0,0,0,.25);
+        background-color: $color-green-dark-1;
+        padding: 1.5rem;
+        display: grid;
+        grid-template-columns: 18% 82%;
+        color: transparent !important;
+    
+        @media only screen and (max-width: $bp-smallest) {
+            height: 8rem;
+        }
+    }
+    
+    &__picture {
+        @include with-height-100;
+        @include flex-center-row;
+
+        @media only screen and (max-width: $bp-smallest) {
+            height: 90%;
+            width: 90%;
+        } 
+    }
+
+    &__img {
+        @include with-height-100;
+        object-fit: cover;
+        opacity: .7;
+    }
+
+    &__info {
+        @include grid-center;
+        @include with-height-100;
+        grid-template-columns: 10% 70% 20%;
+        padding: 1.5rem;
+    }
+}
+
+.open {
+    display: flex;
+}
+
+
+

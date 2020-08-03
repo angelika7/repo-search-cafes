@@ -1,0 +1,143 @@
+.table {
+    border: .5px solid rgba($color-green-light-4, .4);
+    padding: 1rem;
+    width: 100%;
+
+    @media only screen and (max-width: $bp-smallest) {
+        padding: 1rem 0.5rem;
+    }
+}
+
+tbody {
+    width: 100%;
+}
+
+th {
+    border-bottom: .5px solid rgba($color-green-light-4, .4);
+    padding-bottom: 1rem;
+
+    &:last-child {
+        @media only screen and (max-width: $bp-smallest) {
+            display: none;
+        }
+    }
+}
+
+tr {
+    &:not(:last-child) {
+        border-bottom: .5px solid rgba($color-green-light-4, .4);
+    }
+}
+
+td {
+    padding: 1rem 0;
+    vertical-align: middle;
+
+    &:last-child {
+        @media only screen and (max-width: $bp-smallest) {
+            width: 1.8rem;
+        }
+    }
+}
+
+.table-cell {
+    font-size: 1.1rem;
+    color: $color-green-dark-2;
+    text-align: center;
+    width: auto;
+    height: 6rem;
+
+    @media only screen and (min-width: $bp-largest) {
+        width: 15rem;
+    }
+
+    @media only screen and (max-width: $bp-mobile) {
+        font-size: .7rem;
+    }
+}
+
+.table-mark {
+    width: 100%;
+    font-weight: 700;
+    font-size: 1.2rem;
+    display: grid;
+    grid-template-rows: repeat(2fr);
+    padding: 1.5rem 0;
+    
+
+    @media only screen and (min-width: $bp-largest) {
+        font-size: 1.4rem;
+    }
+
+    
+    @media only screen and (max-width: $bp-mobile) {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+    }
+
+    &__link {
+        text-decoration: none;
+        i {
+            font-size: 1.6rem;
+            color: $color-green-dark-3;
+
+            @media only screen and (max-width: $bp-mobile) {
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
+.table-name {
+    font-weight: 700;
+    width: 11rem;
+
+    @media only screen and (min-width: $bp-largest) {
+        font-size: 1.8rem;
+    }
+    
+    @media only screen and (max-width: $bp-mobile) {
+        font-size: .6rem;
+        width: 4rem;
+    }
+
+    &__link {
+        cursor: pointer;
+        text-decoration-color: transparent !important;
+        color: $color-green-dark-2;
+
+        @media only screen and (max-width: $bp-mobile) {
+            writing-mode: tb-rl;
+        }
+    }
+
+}
+
+.table-legend {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.leader {
+    background-color: rgba($color-green-light-4, .3);
+}
+
+.input {
+    border: none;
+    background-color: transparent;
+    width: 85%;
+    height: 95%;
+    font-size: 1.1rem;
+    color: $color-green-dark-2;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    outline-color: $color-green-light-1;
+    cursor: pointer;
+
+    @media only screen and (max-width: $bp-mobile) {
+        font-size: .6rem;
+    }
+};
+

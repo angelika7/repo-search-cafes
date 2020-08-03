@@ -1,0 +1,41 @@
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-center-row {
+    @include flex-center;
+    flex-direction: row;
+}
+
+@mixin flex-center-column {
+    @include flex-center;
+    flex-direction: column;
+}
+
+@mixin grid-center {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin bg-center-no-repeat {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+
+@mixin btn-style {
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+@mixin with-height-100 {
+    width: 100%;
+    height: 100%;
+}
+
+
+

@@ -1,0 +1,101 @@
+.item-details {
+    background-color: rgba($color-green-light-4, .4);
+    @include grid-center;
+    grid-template-columns: 27% 47% 15% 11%;
+    padding: 4% 2%;
+    width: 100%;
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.25);
+
+    @media only screen and (max-width: $bp-large) {
+        grid-template-columns: 26% 44% 17% 11%;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        padding-bottom: 2.5rem;
+    }
+
+    @media only screen and (max-width: $bp-mobile) {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__profile-picture {
+        width: 100%;
+        @include flex-center-row;
+
+        @media only screen and (max-width: $bp-mobile) {
+            width: 60%;
+            padding-top: 3rem;
+        }
+    }
+
+    &__img {
+        width: 88%;
+        height: 100%;
+        object-fit: fill;
+        display: block;
+    }
+
+    &__info {
+        @include flex-center-column;
+
+        @media only screen and (max-width: $bp-mobile) {
+            margin: 2rem 0;
+        }
+
+        h3 {
+            &:not(:last-child) {
+                margin-bottom: 1rem;
+            }
+
+            @media only screen and (max-width: $bp-mobile) {
+                &:not(:last-child) {
+                    margin-bottom: .5rem;
+                }
+            }
+        }
+
+        span {
+            margin-left: 1rem;
+        }
+    }
+
+    &__marks {
+        @include grid-center;
+        @include with-height-100;
+        grid-template-rows: 50% 50%;
+        grid-template-columns: 1fr;
+
+        @media only screen and (max-width: $bp-mobile) {
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__like-box {
+        @include with-height-100;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-end;
+        background-color: transparent;
+        border: none;
+        outline: none;
+    }
+
+    &__mark-box {
+        @include with-height-100;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    &__buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+}

@@ -1,0 +1,194 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.heading-primary {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 5.5rem;
+    font-weight: 100;
+    letter-spacing: .2rem;
+    line-height: 6rem;
+    color: $color-green-light-4;
+
+    @media only screen and (min-width: $bp-largest) {
+        font-size: 8rem;
+        line-height: 9rem;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+        font-size: 4.5rem;
+        line-height: 5.5rem;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+        font-size: 3.5rem;
+    }
+
+    @media only screen and (max-width: $bp-mobile) {
+        font-size: 2.5;
+        line-height: 4rem;
+    }
+}
+
+.heading-secondary {
+    color: $color-green-dark-2;
+
+    &--light {
+        line-height: 2rem;
+        color: $color-green-light-4;
+        font-size: 1.6rem;
+    }
+
+    &--small {
+        font-size: 1.2rem;
+
+        @media only screen and (max-width: $bp-mobile) {
+            font-size: .8rem !important;
+        }
+    }
+
+    @media only screen and (min-width: $bp-largest) {
+        font-size: 2rem;
+        line-height: 3.5rem;
+    }
+
+    @media only screen and (max-width: $bp-large) {
+        font-size: 1.5rem;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+        font-size: 1.4rem
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+        font-size: 1.2rem;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+        font-size: 1.1rem;
+    }
+}
+
+.heading-tertiary {
+    font-size: 1.2rem;
+    color: $color-green-dark-4;
+    line-height: 2rem;
+    text-align: center;
+
+    @media only screen and (min-width: $bp-largest) {
+        font-size: 1.8rem;
+        line-height: 2.5rem;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+        font-size: 1.4rem;
+    }
+
+    &--light {
+        color: $color-green-light-4;
+    }
+
+    &--thin {
+        font-weight: 100;
+        font-size: 1.3rem;
+    }
+}
+
+.paragraph {
+    font-size: 1.2rem;
+    color: $color-green-light-4;
+    line-height: 1.5rem;
+    transition: all .2s;
+
+    @media only screen and (min-width: $bp-largest) {
+        font-size: 1.7rem;
+        line-height: 2.1rem;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+        font-size: 1.1rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        font-size: 1rem;
+    }
+
+    @media only screen and (max-width: $bp-mobile) {
+        font-size: .8rem;
+    }
+
+    &:hover {
+        color: $color-green-light-2;
+    }
+
+    &--small {
+        font-size: 1rem;
+
+        @media only screen and (min-width: $bp-largest) {
+            font-size: 1.5rem;
+        }
+
+        @media only screen and (max-width: $bp-smallest) {
+            font-size: .8rem;
+        }
+
+        @media only screen and (max-width: $bp-mobile) {
+            font-size: .7rem;
+        }
+
+        &:hover {
+            color: $color-green-light-4;
+        }
+    }
+}
+
+.heading-table {
+    font-size: 1rem;
+    color: $color-green-light-2;
+    line-height: 1.5rem;
+
+    @media only screen and (min-width: $bp-largest) {
+        font-size: 1.6rem;
+        line-height: 2rem;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+        font-size: 1rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        font-size: .9rem;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+        font-size: .8rem;
+
+    }
+
+    @media only screen and (max-width: $bp-mobile) {
+        font-size: .6rem;
+        line-height: 1rem;
+    }
+}
+
+.popup-text {
+    font-size: .8rem;
+    line-height: 1.3rem;
+    letter-spacing: .15rem;
+    text-align: center !important;
+
+    @media only screen and (max-width: $bp-large) {
+        font-size: .6rem;
+    }
+
+    @media only screen and (max-width: $bp-small-extra) {
+        font-size: .2rem;
+        line-height: .8rem;
+    }
+
+    &--bold {
+        font-weight: 700;
+    }
+}
+
+

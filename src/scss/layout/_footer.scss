@@ -1,0 +1,9 @@
+.footer {
+    background-image: linear-gradient(rgba($color-green-dark-1, .7), rgba($color-green-dark-1, .7)), url(../img/8.jpg);
+    @include flex-center-row;
+    padding: 5rem 0;
+
+    @media only screen and (max-width: $bp-medium) {
+        padding: 3rem 0;
+    }
+}

@@ -1,0 +1,212 @@
+.popup-box {
+    @include with-height-100;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+.popup {
+    position: absolute;
+    background-color: rgba($color-green-light-4, .9);
+    box-shadow: 0 3rem 4rem rgba(0,0,0,.25);
+    height: 90%;
+    z-index: 11;
+    width: 95%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @include flex-center-column;
+
+    @media only screen and (max-width: $bp-large) {
+        height: 70%;
+    }
+
+    @media only screen and (max-width: $bp-small-extra) {
+        height: 70rem;
+        top: 5rem;
+        left: 50%;
+        transform: translate(-50%, 0);
+
+    }
+
+    &__slogan {
+        margin-top: 2rem;
+        @include flex-center-row;
+
+        h1 {
+            color: $color-green-dark-4;
+            font-size: 3rem;
+
+            @media only screen and (max-width: $bp-small-extra) {
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        height: 90%;
+        gap: 1%;
+        padding: 2rem;
+
+        @media only screen and (max-width: $bp-small-extra) {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &__col {
+        display: grid;
+        grid-template-rows: 50% 50%;
+        gap: 1%;
+
+        @media only screen and (max-width: $bp-small-extra) {
+            display: flex;
+            flex-direction: column;
+        } 
+
+        &--1 {
+            grid-template-rows: 33.33% 66%;
+        }
+
+        &--3 {
+            grid-template-rows: 66% 33.33%;
+        }
+    }
+}
+
+.information {
+    @include with-height-100;
+    padding: 1rem;
+    display: grid;
+    gap: .5rem;
+    grid-template-rows: 52% 45% !important;
+    border: .5rem solid transparent;
+    box-shadow: -3px 4px 8px 0px rgba(0,0,0,0.75);
+
+    @media only screen and (max-width: $bp-large) {
+        grid-template-rows: 40% 60%;
+    }
+
+    @media only screen and (max-width: $bp-small-extra) {
+        height: 10rem;
+        grid-template-columns: 45% 55%;
+        padding: 0;
+
+        &--small {
+            height: 7rem;
+        }
+    }
+
+    &--3 {
+
+        @media only screen and (max-width: $bp-large) {
+            grid-template-rows: 40% 60%;
+        }
+
+        @media only screen and (max-width: $bp-small-extra) {
+            height: 13rem;
+            grid-template-columns: 45% 55%;
+        }
+    }
+
+    &--4 {
+
+        @media only screen and (max-width: $bp-large) {
+            grid-template-rows: 40% 60%;
+        }
+
+        @media only screen and (max-width: $bp-small-extra) {
+            height: 10rem;
+            grid-template-columns: 45% 55%;
+        }
+    }
+
+    &--5 {
+        grid-template-rows: 60% 40%;
+
+        @media only screen and (max-width: $bp-large) {
+            grid-template-rows: 40% 60%;
+        }
+
+        @media only screen and (max-width: $bp-small-extra) {
+            height: 10rem;
+            grid-template-columns: 45% 55%;
+        }
+    }
+
+    &__img {
+        @include with-height-100;
+        object-fit: contain;
+
+        @media only screen and (max-width: $bp-small-extra) {
+            height: 8rem;
+        }
+    }
+
+    &__list {
+        @include flex-center-column;
+        list-style: none;
+        padding: 1rem;
+        background-color: $color-green-focus;
+        box-shadow: -2px 3px 5px 0px rgba(0,0,0,0.75);
+
+        @media only screen and (max-width: $bp-small-extra) {
+            height: 9rem;  
+            padding: .5rem ;      
+        }
+    }
+
+    &__item {
+        padding: .5rem 1.5rem;
+
+        &--center {
+            align-self: center;
+        }
+
+        @media only screen and (max-width: $bp-large) {
+            padding: .2rem 1rem
+        }
+    }
+}
+
+.order-list {
+    list-style: none;
+    counter-reset: my-awesome-counter;
+    
+    li {
+        counter-increment: my-awesome-counter;
+        display: flex;
+        flex-direction: row;
+    }
+
+    
+  li::before {
+    content: counter(my-awesome-counter) ". ";
+    color: #db1856;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-right: 1rem;
+
+    @media only screen and (max-width: $bp-small-extra) {
+        font-size: .4rem;
+        margin-right: .2rem;
+    }
+  }
+}
+
+.small {
+    @media only screen and (max-width: $bp-small-extra) {
+        height: 6rem;
+    }
+}
+
+.big {
+    @media only screen and (max-width: $bp-small-extra) {
+        height: 11rem;
+    }
+}
+
+
+

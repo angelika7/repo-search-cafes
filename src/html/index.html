@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Montserrat|Roboto+Slab:100,400&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Because I love coffee...</title>
+</head>
+<body>
+    <main class="container">
+        <header class="header margin-bottom-medium margin-top-medium">
+            <div class="top-header">
+                <img src="../img/logo.svg" alt="Coffee icon" class="logo">
+                <h1 class="heading-primary">Because I love coffee...</h1>
+                <div class="likes"></div>
+                    <div class="likes__field">  
+                        <p class="paragraph">Like list</p>
+                        <img src="../img/heart2.svg" alt="Like heart" class="like">
+                    </div> 
+                    <div class="likes__panel">
+                        <ul class="likes__list">
+                            <!--Like list <li>-->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-header margin-top-small">
+                <h2 class="heading-secondary">- moje ulubione wrocławskie kawiarnie w jednym miejscu!</h2>
+            </div>
+        </header>
+        <div class="content padding-top-medium">
+            <section class="section-search padding-top-medium">
+                <form action="#" class="search">
+                    <input type="text" class="search__input" placeholder="Szukaj">
+                    <button class="search__button">
+                        <img src="../img/search.svg" alt="Search icon" class="search__icon">
+                    </button>
+                </form>
+                <div class="results">
+                    <ul class="results__list">
+                        <!--Results list <li>-->
+                    </ul>
+                </div>
+            </section>
+            <section class="section-main">
+                <div class="item-details">
+                    <!--Item -->
+                </div> 
+                <form action="#" class="form">
+                <table class="table margin-top-medium">
+                    <thead>
+                        <tr>
+                            <th class="heading-table">Nazwa</th>
+                            <th class="heading-table">Zamawianie *</th>
+                            <th class="heading-table">Obsługa **</th>
+                            <th class="heading-table">Kawa **</th>
+                            <th class="heading-table">Ciasto **</th>
+                            <th class="heading-table">Klimat ***</th>
+                            <th class="heading-table">Ceny ****</th>
+                            <th class="heading-table">Ocena</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                    </tbody>
+                </table>
+            </form>
+                <button class="btn margin-top-small sort">
+                    Sortuj
+                    <i class="fas fa-sort-amount-down"></i>
+                </button>
+                <div class="table-legend">
+                    <p class="paragraph paragraph--small">Skala ocen: 0 - 5.</p>
+                    <p class="paragraph paragraph--small">* Samoobsługa / kelner</p>
+                    <p class="paragraph paragraph--small">** Jakkość obsługi, kawy, ciasta.</p>
+                    <p class="paragraph paragraph--small">*** Aranżacja wnętrza, muzyka, atmosfera.</p>
+                    <p class="paragraph paragraph--small">**** Ceny wyższe niż 11zł za kawę i/lub ciasto - ocena 3, ceny 10-11zł - ocena 4, ceny niższe niż 10zł - ocena 5.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="footer">
+        <p class="paragraph">Aplikację wykonała Angelika Chochorowska. &copy Wszystkie prawa zastrzeżone.</p>
+    </footer>
+    <!--Popup with instruction-->
+    <div class="popup-box popUp">
+        <div class="popup">
+            <div class="popup__slogan">
+                <h1 class="heading-primary">Witaj w 'Because I love coffee...'!</h1>
+            </div>
+            <button class="close">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="popup__content">
+                <div class="popup__col popup__col--1">
+                    <div class="information information--small">
+                        <img src="../img/popup-search.png" class="information__img small">
+                        <ul class="information__list small">
+                            <li class="information__item">
+                                <p class="popup-text">
+                                    <i class="fas fa-check check"></i>
+                                Użyj pola <span class="popup-text--bold">"SZUKAJ"</span>, żeby znakeźć swoją kawiarnię</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="information information--5">
+                        <img src="../img/not-found.svg" class="information__img information__img--5">
+                        <ol class="information__list order-list">
+                            <li class="information__item information__item--center">
+                                <p class="popup-text">
+                                <span class="popup-text--bold">Brakuje Twojej kawiarni?</span> Wprowadź informacje i zapisz w bazie</p>
+                            </li>
+                            <li class="information__item information__item--center">
+                                <p class="popup-text">
+                                Kliknij <span class="popup-text--bold">"ZOBACZ SZCZEGÓŁY"</span> i korzystaj z innych funkcji w aplikacji</p>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="popup__col">
+                    <div class="information information--small ">
+                        <img src="../img/popup-result.png" class="information__img small">
+                        <ul class="information__list small">
+                            <li class="information__item">                                    
+                                <p class="popup-text">
+                                    <i class="fas fa-check check"></i>
+                                    Kliknij <span class="popup-text--bold">"WIĘCEJ"</span>, żeby zobaczyć szczegóły</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="information information--4">
+                        <img src="../img/like-sort.svg" class="information__img">
+                        <ul class="information__list">
+                            <li class="information__item">
+                                <p class="popup-text">
+                                    <i class="fas fa-check check"></i>
+                                    Kliknij <span class="popup-text--bold">"SERDUSZKO"</span> i zobacz swoją listę ulubionych kawiarni</p>
+                            </li>
+                            <li class="information__item">
+                                <p class="popup-text">
+                                    <i class="fas fa-check check"></i>
+                                Kliknij <span class="popup-text--bold">"SORTUJ"</span>, żeby ułożyć kawiarnie w tabeli według ocen</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="popup__col popup__col--3">
+                    <div class="information information--3">
+                        <img src="../img/popup-info.svg" class="information__img big">
+                        <ol class="information__list order-list big">
+                            <li class="information__item">
+                                <p class="popup-text">Zobacz szczegóły wyszukiwania</p>
+                            </li>
+                            <li class="information__item">
+                                <p class="popup-text">Kliknij <span class="popup-text--bold">"SERDUSZKO"</span>, żeby dodać do ulubionych</p>
+                            </li>
+                            <li class="information__item">
+                                <p class="popup-text">Kliknij <span class="popup-text--bold">"PLUS"</span>, żeby dodać do tabeli</p>
+                            </li>
+                            <li class="information__item">
+                                <p class="popup-text">Oceń swoją kawiarnię
+                            </li>
+                            <li class="information__item">
+                                <p class="popup-text">Zobacz <span class="popup-text--bold">ŚREDNIĄ OCEN</span> dla swojej kawiarni</p>
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="information information--small">
+                        <img src="../img/legend.svg" class="information__img small">
+                        <ul class="information__list small">
+                            <li class="information__item">
+                                <p class="popup-text">
+                                    <i class="fas fa-check check"></i>
+                                Legenda w aplikacji pomoże Ci ocenić kawiarnie</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

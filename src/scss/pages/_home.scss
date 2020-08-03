@@ -1,0 +1,78 @@
+.container {
+    padding: 5rem;
+
+    @media only screen and (max-width: $bp-large) {
+        padding: 4rem 4rem;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+        padding: 4rem 2rem 4rem 2rem;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+        padding: 4rem 1rem 4rem 1rem;
+    }
+    
+    @media only screen and (max-width: $bp-small) {
+        padding: 4rem 4rem;
+    }
+
+    @media only screen and (max-width: $bp-small-extra) {
+        padding: 4rem 1rem 4rem 1rem;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+        padding: 3rem 1rem 3rem 1rem;
+    }
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 33% 64%;
+    grid-gap: 3%;
+
+    @media only screen and (max-width: $bp-large) {
+        grid-gap: 2%;
+        grid-template-columns: 29% 69%;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+        grid-template-columns: 25% 73%;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        display: flex;
+        flex-direction: column;
+    }
+
+    @media only screen and (max-width: $bp-mobile) {
+        padding-top: 0;
+    }
+}
+
+main {
+    position: relative;
+}
+
+.section-main {
+    display: grid;
+    grid-template-rows: 1fr 1.5fr .5fr;
+
+    @media only screen and (max-width: $bp-smallest) {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.section-search {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(rgba($color-green-light-4, .5), rgba($color-green-light-4, .5)), url(../img/foto1.jpg);
+    @include bg-center-no-repeat;  
+    padding-bottom: 5rem;
+
+    @media only screen and (max-width: $bp-small) {
+        margin-bottom: 4rem;
+    }
+}
