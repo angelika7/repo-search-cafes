@@ -4,11 +4,11 @@
   "description": "Because I love coffee. Application",
   "main": "main.js",
   "scripts": {
-    "watch:sass": "node-sass src/scss/main.scss public/css/style.css -w",
+    "watch:sass": "node-sass src/scss/main.scss docs/css/style.css -w",
     "dev": "webpack --mode development --config webpack.server.config.js && webpack --mode development -w",
-    "prefix": "postcss css/style.css --use autoprefixer -d css/style.prefix.css",
+    "prefix": "postcss docs/css/style.css --use autoprefixer -d docs/css/prefix",
     "prod": "webpack --mode production",
-    "start": "node ./public/server.js"
+    "start": "node ./docs/server.js"
   },
   "author": "Angelika Chochorowska",
   "license": "ISC",
@@ -25,9 +25,10 @@
     "html-webpack-plugin": "^3.2.0",
     "node-sass": "^4.13.1",
     "npm-run-all": "^4.1.5",
-    "postcss": "^7.0.32",
-    "postcss-cli": "^7.1.1",
+    "postcss": "^7.0.0",
+    "postcss-cli": "^8.0.0",
     "postcss-loader": "^3.0.0",
+    "precss": "^4.0.0",
     "style-loader": "^1.0.0",
     "webpack": "^4.39.3",
     "webpack-cli": "^3.3.11",

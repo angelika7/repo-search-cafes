@@ -110,7 +110,7 @@ height: 3rem;
         grid-template-columns: 100%;
     }
 
-    &__link  {
+    &__link, &__link:visited, &__link:active  {
         color: transparent !important;
     }
 

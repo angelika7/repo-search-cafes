@@ -8,6 +8,7 @@
 .popup {
     position: absolute;
     background-color: rgba($color-green-light-4, .9);
+    backface-visibility: hidden;
     box-shadow: 0 3rem 4rem rgba(0,0,0,.25);
     height: 90%;
     z-index: 11;

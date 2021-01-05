@@ -12,6 +12,11 @@ html {
     box-sizing: inherit;
 }
 
+html {
+    min-height: 100%;
+    position: relative;
+}
+
 body {
     box-sizing: border-box;
 }

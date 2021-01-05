@@ -1,5 +1,5 @@
 .popUp {
-    animation: popupEffect 1s linear 1;
+    animation: popupEffect .5s linear 1;
 }
 
 @keyframes popupEffect {
@@ -15,7 +15,7 @@
 ////////////////////////////////////////////////
 
 .popUpOut {
-    animation: popupOut 1s linear 1;
+    animation: popupOut .5s linear 1;
 }
 
 @keyframes popupOut {

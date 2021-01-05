@@ -8,19 +8,17 @@ export const clearSearchList = () => elements.resSearchList.innerHTML = '';
 
 export const renderCafe = cafe => {
     const markup =
-        `
+    `
         <li class="search-item margin-top-small" id="${cafe.id}">
             <figure class="search-item__picture">
-                <img src="${imgSrc}" alt="Zdjęcie kawiarni 1" class="search-item__img">
+                <img src="${imgSrc}" alt="Zdjęcie kawiarni" class="search-item__img">
             </figure>
             <div class="search-item__info">
                 <h3 class="heading-tertiary heading-tertiary--light">${cafe.name}</h3>
                 <div class="search-item__details">
-                    <a class="search-item__link" href="#${cafe.id}">
-                        <button class="btn-more">
-                            <span class="paragraph">Więcej</span>
-                            <i class="fas fa-arrow-right click-button"></i>
-                        </button>
+                    <a class="search-item__link btn-more" href="#${cafe.id}" aria-label="${cafe.name} pokaż więcej">
+                        <span class="paragraph">Więcej</span>
+                        <span class="fas fa-arrow-right click-button"></span>    
                     </a>
                 </div>
             </div>
@@ -70,9 +68,9 @@ export const renderBlankCard = (id) => {
     const imgSrc = 'img/cafe6.jpeg';
     const markup =
         `
-        <li class="search-item margin-top-small" id="${id}">
+        <li class="search-item margin-top-small" id="${id}" aria-label="Nie ma takiej kawiarni w bazie, wprowadź swoje dane o kawiarni">
             <figure class="search-item__picture">
-                <img src="${imgSrc}" alt="Zdjęcie kawiarni 1" class="search-item__img">
+                <img src="${imgSrc}" alt="Zdjęcie kawiarni" class="search-item__img">
             </figure>
             <div class="search-item__info">
                 <h3 class="heading-tertiary heading-tertiary--light">Ups... nie ma takiej kawiarni...</h3>
@@ -97,19 +95,17 @@ export const renderBlankCard = (id) => {
                         <label class="heading-tertiary heading-tertiary--light" for="phone">Telefon:</label>
                         <input type="text" name="phone" id="phone" required>
                     </div>
-                        <button class="btn-more add-new">
-                            <span class="paragraph">Zapisz w bazie</span>
-                            <i class="fas fa-arrow-right click-button"></i>
-                        </button>
-                    </form>
-                    <div class="search-item__details search-item__details--cafe hidden">
-                        <a class="search-item__link" href="#${id}">
-                            <button class="btn-more add-new">
-                                <span class="paragraph">Zobacz szczegóły</span>
-                                <i class="fas fa-arrow-right click-button"></i>
-                            </button>
-                        </a>
-                    </div>
+                    <button class="btn-more add-new">
+                        <span class="paragraph">Zapisz w bazie</span>
+                        <span class="fas fa-arrow-right click-button"></span>
+                    </button>
+                </form>
+                <div class="search-item__details search-item__details--cafe hidden">
+                    <a class="search-item__link" href="#${id}" btn-more add-new>
+                        <span class="paragraph">Zobacz szczegóły</span>
+                        <span class="fas fa-arrow-right click-button"></span>
+                    </a>
+                </div>
             </div>
         </li>
     `

@@ -6,7 +6,7 @@ const Dotenv = require('dotenv-webpack');
 module.exports = {
   entry: './src/js/main.js',
   output: {
-    path: path.join(__dirname, 'public'),
+    path: path.join(__dirname, 'docs'),
     filename: 'js/bundle.js',
     publicPath: ''
   },
@@ -54,10 +54,10 @@ module.exports = {
   },
   plugins: [
     new HtmlWebPackPlugin({
-      template: "./src/html/index.html",
-      filename: "./index.html",
-      excludeChunks: [ 'server' ]
-    }),
+      template: './src/html/index.html',
+      filename: "index.html",
+      excludeChunks: [ 'server' ] 
+    }),  
     new Dotenv()
   ]
 }

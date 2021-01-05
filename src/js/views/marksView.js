@@ -22,7 +22,7 @@ export const renderMark = (cafe, myCafe) => {
             <a href="#${cafe.id || myCafe.id }" class="table-name__link">
                 ${cafe.name || myCafe.name}
             </a>
-            <i class="fas fa-trash-alt trash" data-key="${cafe.id || myCafe.id}"></i>
+            <span aria-label="Usuń kawiarnię" role="button" class="fas fa-trash-alt trash" data-key="${cafe.id || myCafe.id}"></span>
         </td>
         <td class="table-cell"> <!-- samoobsługa -->
             <select name="order-type" id="" class="input input--name order">
@@ -37,7 +37,7 @@ export const renderMark = (cafe, myCafe) => {
         ${generateCell(categories[4])}
         <td class="table-cell table-mark" data-key="${cafe.id || myCafe.id}">
             <a href="#${cafe.id || myCafe.id}" class="table-mark__link">
-                <i class="fas fa-pencil-alt pencil"></i>
+                <span class="fas fa-pencil-alt pencil"></span>
             </a>
             <h2 class="heading-secondary heading-secondary--small mark">-</h2>
         </td>
@@ -72,7 +72,7 @@ export const reRenderMark = mark => {
             <a href="#${mark.id}" class="table-name__link">
                 ${mark.name}
             </a>
-            <i class="fas fa-trash-alt trash" data-key="${mark.id}"></i>
+            <span aria-label="Usuń kawiarnię" role="button" class="fas fa-trash-alt trash" data-key="${mark.id}"></span>
         </td>
         <td class="table-cell"> 
             ${mark.order === 'self' ? 'Bar' : 'Stolik'}
@@ -93,9 +93,6 @@ export const reRenderMark = mark => {
             ${mark.prices}
         </td>
         <td class="table-cell table-mark data-key="${mark.id}">
-            <a href="#${mark.id}" class="table-mark__link">
-                <i class="fas fa-pencil-alt pencil"></i>
-            </a>
             <h2 class="heading-secondary heading-secondary--small mark">${mark.average}</h2>
         </td>
     </tr>

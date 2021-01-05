@@ -180,7 +180,7 @@ elements.cafeInfo.addEventListener('click', (e) => {
 
 elements.likesIcon.addEventListener('click', () => {
     if(state.likes.likes.length > 0) {
-        elements.likesList.classList.toggle('open');
+        elements.likesPanel.classList.toggle('openPanel');
     }
 });
 
@@ -338,7 +338,7 @@ elements.btnPopup.addEventListener('click', () => {
     document.querySelector('.popup-box').classList.add('popUpOut');
     setTimeout(() => {
         document.querySelector('.popup-box').style.display = 'none';
-    }, 1000);
+    }, 500);
 })
 
 

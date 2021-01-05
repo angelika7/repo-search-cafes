@@ -10,15 +10,15 @@ export const renderLike = like => {
     <li class="likes__item">
         <a href="#${like.id}" class="likes__link">
             <figure class="likes__picture">
-                <img src="${like.img}" alt="Zdjęcie kawiarni 1" class="likes__img">
+                <img src="${like.img}" alt="" class="likes__img">
             </figure>
             <div class="likes__info">
-                <img src="img/heart2.svg" alt="Like logo" class="like like--list">
+                <img src="img/heart2.svg" alt="" class="like like--list">
                 <h3 class="heading-tertiary heading-tertiary--light">${like.name}</h3>
                 <div class="likes__details">
-                    <button class="btn-more">
+                    <button class="btn-more" aria-label="${like.name} pokaż więcej">
                         <span class="paragraph paragraph--small">Więcej</span>
-                        <i class="fas fa-arrow-right click-button click-button--list"></i>
+                        <span class="fas fa-arrow-right click-button click-button--list"></span>
                     </button>
                 </div>
             </div>

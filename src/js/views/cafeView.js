@@ -21,7 +21,7 @@ export const renderCafeInfo = (isLiked, like, cafe, isWritten, mark, myCafe) => 
             </div>
             <div class="item-details__marks">
                 <button class="item-details__like-box">
-                    <img src="img/heart${isLiked ? '2' : '1'}.svg" alt="Like logo" class="like like--min">
+                    <img src="img/heart${isLiked ? '2' : '1'}.svg" alt="Ikona like" class="like like--min">
                 </button>
                 <div class="item-details__mark-box" data-key="${cafe.id}">
                     <h3 class="heading-tertiary heading-tertiary--thin">Ocena</h3>
@@ -29,11 +29,11 @@ export const renderCafeInfo = (isLiked, like, cafe, isWritten, mark, myCafe) => 
                 </div>
             </div>
             <div class="item-details__buttons">
-                <button class="button">
-                    <i class="fas fa-plus-circle add ${isWritten ? 'inactive' : ''}"></i>
+                <button class="button" aria-label="Dodaj kawiarnię do tabeli">
+                    <span class="fas fa-plus-circle add ${isWritten ? 'inactive' : ''}"></span>
                 </button>
-                <button class="button">
-                    <i class="fas fa-minus-circle remove ${isWritten ? '' : 'inactive'}"></i>
+                <button class="button" aria-label="Usuń kawiarnię z tabeli">
+                    <span class="fas fa-minus-circle remove ${isWritten ? '' : 'inactive'}"></span>
                 </button>
             </div>
     `
@@ -51,7 +51,7 @@ export const hideAverage = cafe => {
 };
 
 export const changeStyle = e => {
-    const btns = document.querySelectorAll('.button i');
+    const btns = document.querySelectorAll('.button span');
     const btnsArr = [...btns];
     console.log(btns, btnsArr)
     btnsArr.forEach(el => {

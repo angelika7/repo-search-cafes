@@ -4,4 +4,11 @@ module.exports = {
       browsers: ['last 10 versions']
     }
   }
-};
+}; 
+
+/* module.exports = {
+  plugins: [
+    require('precss'),
+    require('autoprefixer')
+  ]
+} */

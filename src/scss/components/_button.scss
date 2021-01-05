@@ -37,10 +37,10 @@
     &:hover {
         color: $color-green-dark-3;
         background-color: $color-green-light-4;
-        outline: none;
+        outline: $color-green-dark-3;
     }
 
-    i {
+    span {
         margin-left: .5rem;
     }
 
@@ -69,7 +69,7 @@
     background-color: transparent;
     border: none;
 
-    i {
+    span {
         font-size: 1.7rem;
     }
 
@@ -80,7 +80,7 @@
             margin-bottom: .7rem;
         } 
 
-        i {
+        span {
             font-size: 1.5rem;
         }
     }
@@ -115,7 +115,6 @@
     height: 3.1rem;
     border: none;
     background-color: transparent;
-    outline: none;
 }
 
 .add, .remove {
@@ -125,7 +124,7 @@
 
     &:hover {
         color: $color-green-dark-4;
-        outline: none;
+        outline: $color-green-dark-3;
     }
 }
 
@@ -135,7 +134,7 @@
 
     &:hover {
         color: gray;
-        outline: none;
+        outline: $color-green-dark-3;
     }
 }
 
@@ -150,6 +149,7 @@
     width: 6rem;
     height: 6rem;
     @include btn-style;
+    @include flex-center;
     background-color: transparent;
 
     @media only screen and (max-width: $bp-small-extra) {
@@ -157,7 +157,12 @@
         height: 3rem;
     }
 
-    i {
+    &__icon {
+        position: relative;
+        outline: $color-green-dark-3;
+    }
+
+    span {
         color: $color-green-dark-4;
         font-size: 6rem;
         transform: scale(1);
