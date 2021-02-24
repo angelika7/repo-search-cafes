@@ -139,7 +139,6 @@ window.addEventListener('load', () => {
     state.likes = new Likes();
     state.marks = new Marks();
     if(!state.search) state.search = new Search()
-
     state.likes.likes.forEach(like => likesView.renderLike(like));
     state.marks.marks.forEach(mark => marksView.renderMark(mark));
 })
@@ -181,12 +180,14 @@ elements.cafeInfo.addEventListener('click', (e) => {
 elements.likesIcon.addEventListener('click', () => {
     if(state.likes.likes.length > 0) {
         elements.likesPanel.classList.toggle('openPanel');
-    }
+    } 
 });
+
 
 // Restore liked and marked cafes on page load
 
 window.addEventListener('load', () => {
+    marksView.showTitleTable();
     state.likes = new Likes();
     state.marks = new Marks();
     if(!state.search) state.search = new Search()

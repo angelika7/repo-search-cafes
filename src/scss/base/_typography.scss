@@ -6,45 +6,31 @@ body {
     font-family: 'Fjalla One', sans-serif;
     font-size: 5.5rem;
     font-weight: 100;
-    letter-spacing: .2rem;
-    line-height: 6rem;
+    letter-spacing: .05rem;
+    line-height: 1.1;
     color: $color-green-light-4;
 
     @media only screen and (min-width: $bp-largest) {
         font-size: 8rem;
-        line-height: 9rem;
     }
 
     @media only screen and (max-width: $bp-medium) {
         font-size: 4.5rem;
-        line-height: 5.5rem;
-    }
-
-    @media only screen and (max-width: $bp-smallest) {
-        font-size: 3.5rem;
-    }
-
-    @media only screen and (max-width: $bp-mobile) {
-        font-size: 2.5;
-        line-height: 4rem;
+        text-align: center;
     }
 }
 
 .heading-secondary {
     color: $color-green-dark-2;
+    font-size: 1.6rem;
 
     &--light {
-        line-height: 2rem;
+        line-height: 1.5;
         color: $color-green-light-4;
-        font-size: 1.6rem;
     }
 
     &--small {
         font-size: 1.2rem;
-
-        @media only screen and (max-width: $bp-mobile) {
-            font-size: .8rem !important;
-        }
     }
 
     @media only screen and (min-width: $bp-largest) {
@@ -52,27 +38,16 @@ body {
         line-height: 3.5rem;
     }
 
-    @media only screen and (max-width: $bp-large) {
-        font-size: 1.5rem;
-    }
-
-    @media only screen and (max-width: $bp-medium) {
-        font-size: 1.4rem
-    }
-
-    @media only screen and (max-width: $bp-smallest) {
-        font-size: 1.2rem;
-    }
-
-    @media only screen and (max-width: $bp-smallest) {
-        font-size: 1.1rem;
+    @media only screen and (max-width: 465px) {
+        line-height: 1.75;
+        text-align: center;
     }
 }
 
 .heading-tertiary {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     color: $color-green-dark-4;
-    line-height: 2rem;
+    line-height: 1.75;
     text-align: center;
 
     @media only screen and (min-width: $bp-largest) {
@@ -90,14 +65,14 @@ body {
 
     &--thin {
         font-weight: 100;
-        font-size: 1.3rem;
+        font-size: 1.4rem;
     }
 }
 
 .paragraph {
     font-size: 1.2rem;
     color: $color-green-light-4;
-    line-height: 1.5rem;
+    line-height: 1.75;
     transition: all .2s;
 
     @media only screen and (min-width: $bp-largest) {
@@ -122,18 +97,11 @@ body {
     }
 
     &--small {
-        font-size: 1rem;
+        font-size: 1.2rem;
+        line-height: 1.75;
 
         @media only screen and (min-width: $bp-largest) {
             font-size: 1.5rem;
-        }
-
-        @media only screen and (max-width: $bp-smallest) {
-            font-size: .8rem;
-        }
-
-        @media only screen and (max-width: $bp-mobile) {
-            font-size: .7rem;
         }
 
         &:hover {
@@ -143,52 +111,28 @@ body {
 }
 
 .heading-table {
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: $color-green-light-2;
-    line-height: 1.5rem;
+    line-height: 1.5;
 
     @media only screen and (min-width: $bp-largest) {
         font-size: 1.6rem;
-        line-height: 2rem;
-    }
-
-    @media only screen and (max-width: $bp-medium) {
-        font-size: 1rem;
-    }
-
-    @media only screen and (max-width: $bp-small) {
-        font-size: .9rem;
-    }
-
-    @media only screen and (max-width: $bp-smallest) {
-        font-size: .8rem;
-
-    }
-
-    @media only screen and (max-width: $bp-mobile) {
-        font-size: .6rem;
-        line-height: 1rem;
     }
 }
 
 .popup-text {
-    font-size: .8rem;
-    line-height: 1.3rem;
-    letter-spacing: .15rem;
-    text-align: center !important;
-
-    @media only screen and (max-width: $bp-large) {
-        font-size: .6rem;
-    }
-
-    @media only screen and (max-width: $bp-small-extra) {
-        font-size: .2rem;
-        line-height: .8rem;
-    }
+    font-size: 1.6rem;
+    line-height: 1.5;
+    letter-spacing: 0.5;
+    color: $color-ebony-dark3;
 
     &--bold {
         font-weight: 700;
     }
+}
+
+.legend-title {
+    color: $color-middle-green-dark3;
 }
 
 

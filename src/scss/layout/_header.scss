@@ -1,41 +1,50 @@
 .header {
-    height: 10vh;
+    //height: 10vh;
     display: flex;
     flex-direction: column;
     width: 100%;
     justify-content: center;
-    
-    .top-header {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
+}
 
-        .logo {
-            width: 7rem;
-            height: 7rem;
-            margin-right: 1rem;
+.top-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 
-            @media only screen and (min-width: $bp-largest) {
-                width: 9rem;
-                height: 9rem;
-            }
+    @media only screen and (max-width: 570px) {
+        margin-top: -3rem;
+    }
+}
 
-            @media only screen and (max-width: $bp-small) {
-                width: 4rem;
-                height: 4rem;
-            }
-        }
+.logo {
+    width: 7rem;
+    height: 7rem;
+    margin-right: 1rem;
+
+    @media only screen and (min-width: $bp-largest) {
+        width: 9rem;
+        height: 9rem;
     }
 
-    .bottom-header {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
-
-        @media only screen and (max-width: $bp-mobile) {
-            justify-content: center;
-        }
+    @media only screen and (max-width: $bp-small) {
+        width: 4rem;
+        height: 4rem;
     }
-    
+}
+
+.bottom-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+    @media only screen and (max-width: 570px) {
+        margin-top: 4rem;
+    }
+
+    @media only screen and (max-width: 465px) {
+        width: 80%;
+        justify-content: center;
+        margin: 4rem auto 0 auto;
+    }
 }

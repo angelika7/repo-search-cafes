@@ -9,5 +9,6 @@ export const elements = {
     tabelBody: document.querySelector('tbody'),
     btnSort: document.querySelector('.sort'),
     btnPopup: document.querySelector('.close'),
+    tableHead: document.querySelector('thead tr'),
 };
 

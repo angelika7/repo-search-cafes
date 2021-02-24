@@ -53,7 +53,6 @@ export const hideAverage = cafe => {
 export const changeStyle = e => {
     const btns = document.querySelectorAll('.button span');
     const btnsArr = [...btns];
-    console.log(btns, btnsArr)
     btnsArr.forEach(el => {
         if(el.classList.contains('inactive')) {el.classList.remove('inactive')}
     });

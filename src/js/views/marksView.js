@@ -1,5 +1,32 @@
 import { elements } from './base';
 
+export const showTitleTable = () => {
+    const documentWidth = window.innerWidth;
+    let markup;
+    if(documentWidth <= 500) {
+        markup = `
+        <th class="heading-table">Nazwa</th>
+        <th class="heading-table" aria-labelledby="order"><span class="fas fa-utensils"></span></th>
+        <th class="heading-table" aria-labelledby="quality"><span class="fas fa-male"></span></th>
+        <th class="heading-table" aria-labelledby="quality"><span class="fas fa-coffee"></span></th>
+        <th class="heading-table" aria-labelledby="quality"><span class="fas fa-cookie-bite"></span></th>
+        <th class="heading-table" aria-labelledby="ambience"><span class="far fa-grin-beam"></span></th>
+        <th class="heading-table" aria-labelledby="prices"><span class="fas fa-dollar-sign"></span></th>
+        <th class="heading-table">Ocena</th>`
+    } else if (documentWidth > 500) {
+        markup = `
+        <th class="heading-table">Nazwa</th>
+        <th class="heading-table" aria-labelledby="order">Zamawianie</th>
+        <th class="heading-table" aria-labelledby="quality">Obsługa</th>
+        <th class="heading-table" aria-labelledby="quality">Kawa</th>
+        <th class="heading-table" aria-labelledby="quality">Ciasto</th>
+        <th class="heading-table" aria-labelledby="ambience">Klimat</th>
+        <th class="heading-table" aria-labelledby="prices">Ceny</th>
+        <th class="heading-table">Ocena</th>`
+    }
+    elements.tableHead.insertAdjacentHTML('beforeend', markup);
+}
+
 export const renderMark = (cafe, myCafe) => {
     const categories = ['service','cafe','cake','ambience','prices'];
     const generateCell = (arr) => {

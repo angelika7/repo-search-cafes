@@ -5,7 +5,7 @@ export const toggleLikeBtn = isLiked => {
     document.querySelector('.like--min').setAttribute('src', `img/heart${iconString}.svg`);
 };
 
-export const renderLike = like => {
+export const renderLike = (like) => {
     const markup = `
     <li class="likes__item">
         <a href="#${like.id}" class="likes__link">
@@ -27,6 +27,19 @@ export const renderLike = like => {
     `
     elements.likesList.insertAdjacentHTML('beforeend', markup);
 };
+
+export const emptyPanel = () => {
+    const markup = `
+    <li class="likes__item">
+        <div class="likes__info">
+                <img src="img/heart2.svg" alt="" class="like like--list">
+                <h3 class="heading-tertiary heading-tertiary--light">Twoja lista lików jest pusta</h3>
+            </div>
+        </a>
+    </li>
+    `
+    elements.likesList.insertAdjacentHTML('beforeend', markup);
+}
 
 export const deleteLike = id => {
     const el = document.querySelector(`.likes__link[href*="${id}"]`).parentElement;

@@ -33,6 +33,7 @@
     display: grid;
     grid-template-columns: 33% 64%;
     grid-gap: 3%;
+    min-height: 90vh;
 
     @media only screen and (max-width: $bp-large) {
         grid-gap: 2%;
@@ -46,9 +47,6 @@
     @media only screen and (max-width: $bp-small) {
         display: flex;
         flex-direction: column;
-    }
-
-    @media only screen and (max-width: $bp-mobile) {
         padding-top: 0;
     }
 }
@@ -74,6 +72,7 @@ main {
     background-image: linear-gradient(rgba($color-green-light-4, .5), rgba($color-green-light-4, .5)), url(../../img/foto1.jpg);
     @include bg-center-no-repeat;  
     padding-bottom: 5rem;
+    border-radius: 1rem;
 
     @media only screen and (max-width: $bp-small) {
         margin-bottom: 4rem;
