@@ -16,13 +16,14 @@ const corsOptions = {
     origin: 'http://google.com',
     optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
     credentials: false
-  }
+}
 
-/* app.use(function(req, res, next) {
-    res.header("Access-Control-Allow-Origin", "www.google.com"); // update to match the domain you will make the request from
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-    next();
-}); */
+app.use(function(req, response, next) {
+    response.setHeader("Access-Control-Allow-Origin", "*");
+    response.setHeader("Access-Control-Allow-Credentials", "true");
+    response.setHeader("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");
+    response.setHeader("Access-Control-Allow-Headers", "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers");
+});
 
 app.get('/', cors(corsOptions), (req, res) => {
   res.sendFile(HTML_FILE); // EDIT

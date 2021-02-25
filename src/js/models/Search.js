@@ -13,7 +13,6 @@ export default class Search {
                 headers: {
                 Accept: "application/json",
                 "User-Key": this.APIkey,
-                'Access-Control-Allow-Origin': '*'
                 }
             })
             
